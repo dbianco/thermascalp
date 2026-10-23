@@ -41,7 +41,10 @@ flowchart LR
 
 ## Materials
 
-- **TPU (flexible filament):** outer shell and structure. Printed in sections to fit common print beds.
+- **TPU (flexible filament):** outer shell, supports and manifold housings. Printed in sections to fit common print
+  beds. Ordinary printed TPU should **not** be assumed to be skin-safe, watertight at microchannel scale, or suitable
+  for prolonged clinical use (see [risks R-10 and R-11](../risk-register.md)). Fluid-carrying and skin-contact parts
+  should be silicone tubing or molded silicone, and the first prototype may use a commercial cap or silicone interface.
 - **Medical-grade silicone:** channel tubing or molded channels in contact with the skin side. Biocompatibility
   requirements for skin-contact materials apply (see [safety](../safety-and-regulatory.md)).
 - Joint method (thermal welding, adhesive, overmolding) is an open question.

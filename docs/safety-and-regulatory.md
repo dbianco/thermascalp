@@ -21,7 +21,9 @@ Standards that are likely to be relevant, to be confirmed with a regulatory prof
 | Usability | IEC 62366-1 |
 | Quality management | ISO 13485 |
 
-## Hazard register (initial)
+## Hazard register (summary)
+
+The full, numbered list with severity and status is in the [risk register](risk-register.md). This table is a summary.
 
 | Hazard | Consequence | Mitigation direction |
 |---|---|---|

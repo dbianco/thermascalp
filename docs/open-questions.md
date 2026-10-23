@@ -5,6 +5,12 @@ milestones. Contributions of data, literature and measurements are especially we
 
 ## Clinical and physiological
 
+- Is the target a scalp-surface temperature or a follicle-zone temperature, and how is each measured? One study cited
+  in the review found a 3 °C coolant more effective than an 8 °C one at reaching the physiological target, at the cost
+  of more discomfort. How does that translate to a safe, effective setpoint?
+- Which chemotherapy regimens benefit from scalp cooling and which do not? The device must never imply universal
+  efficacy.
+
 - What scalp contact temperature and spread are actually effective, and what is the safe lower limit? (Concept
   assumption: about 15 °C, band 14 to 16 °C.)
 - How does the effective setpoint vary with the chemotherapy regimen, hair type and head size?

@@ -11,7 +11,10 @@ scalp before, during and after infusion has two effects:
 Cooling has to cover a **pre-cooling period** (about 30 minutes), the **infusion**, and a **post-infusion period**
 (commonly 60 to 90 minutes). A full session therefore needs stable cooling for roughly **3 to 6 hours**.
 
-Effectiveness varies with the drug regimen, dose and patient, and this project makes no efficacy claims. Treatment
+Effectiveness varies a lot with the **drug regimen**, dose, cap fit and the scalp temperature actually reached. Clinical
+trials and regulatory submissions for commercial systems report significant hair preservation in roughly 40 to 50% of
+patients, or more, in certain groups, but scalp cooling does not work equally well for all drugs. (These figures come
+from the project's source notes and still need proper citations.) This project makes **no efficacy claims**. Treatment
 protocols should come from the patient's oncology team.
 
 ## Current options
@@ -30,10 +33,13 @@ A frozen gel pack must start far below 0 °C because it is a static block of col
 the head, so it has to start extreme to still be effective 30 minutes later. That is uncomfortable and carries a risk
 of cold injury to the skin.
 
-A circulating system keeps replenishing cold, so it can hold a **moderate, steady temperature** instead. The working
-assumption is a scalp contact temperature of roughly 15 °C, within a 14 to 16 °C band, and the project's source notes
-cite a 15 to 22 °C range at follicle depth (1 to 2 mm). These figures are **assumptions to be checked against the
-clinical literature** and are tracked in [open questions](open-questions.md).
+A circulating system keeps replenishing cold, so it can hold a **moderate, steady temperature** instead. The early
+concept used a scalp contact temperature of roughly 15 °C (14 to 16 °C band) as a working value, with source notes
+citing 15 to 22 °C at follicle depth (1 to 2 mm). **15 °C is a placeholder, not a universal medical setpoint.** The
+literature speaks of reaching a sufficiently low temperature at the scalp or follicle zone, and in one study a 3 °C
+coolant was more effective than an 8 °C one at reaching the physiological target, with more potential discomfort. The
+right value must come from the clinical literature and an oncologist, and is tracked in
+[open questions](open-questions.md) and the [risk register](risk-register.md) (R-20, R-21).
 
 ## Prior art to study
 

@@ -8,7 +8,7 @@ flowchart TB
     subgraph Cart["Thermal cart"]
         direction TB
         TANK["Insulated tank<br/>(ice + water)"]
-        PUMP["Pump 12 V"]
+        PUMP["Pump 12 V +<br/>mixing valve / bypass"]
         MCU["Controller (ESP32)"]
         UI["OLED + buttons"]
         PWR["12 V PSU<br/>+ optional backup"]
@@ -35,8 +35,8 @@ flowchart TB
 
 | Aspect | Concept |
 |---|---|
-| Shell | Flexible TPU, FDM printed in sections, designed in open CAD (FreeCAD / Fusion 360 exports) |
-| Heat exchanger | Network of thin silicone channels (or printed TPU channels) bonded to the shell |
+| Shell | Flexible TPU for the **outer shell and supports** only, FDM printed in sections, designed in open CAD |
+| Heat exchanger | Medical-grade silicone interface and channels in contact with the skin. The first prototype may use a commercial cap or silicone liner instead of a printed one |
 | Hydraulics | Symmetric inlet manifold, parallel meshed channels, turbulence baffles, symmetric outlet manifold |
 | Sensing | Two or more waterproof contact temperature sensors at the scalp surface |
 | Fit | Flexible material and adjustable strap to accommodate different head shapes |
@@ -56,13 +56,17 @@ Target total weight: **30 kg or less**, on a wheeled frame. Heavy items sit low 
 
 | Level | Contents |
 |---|---|
-| Lower | Insulated 10 to 15 L tank (expanded polyurethane or similar), submersible 12 V pump, ice and water |
+| Lower | Insulated 10 to 15 L tank (expanded polyurethane or similar), submersible 12 V pump, mixing valve or bypass, ice and water |
 | Upper / front panel | Sealed electronics box: ESP32, motor driver, OLED display, buttons, status indicators |
 | Power | Mains to 12 V DC supply, reserved space for an optional 12 V backup battery |
 
 Thermal mass is the key to the cart design. Water and ice absorb heat at 0 °C while melting, so 10 to 15 L of ice
 water is intended to absorb the heat load of the head over a 4 to 6 hour session without refilling. Whether this holds
 depends on the real heat load and ambient gains, which must be measured (see [open questions](../open-questions.md)).
+
+**Back-of-envelope thermal budget:** 15 L of water warming by 10 K absorbs about 0.63 MJ (15 kg x 4.186 kJ/kg/K x 10 K),
+and each kilogram of ice adds about 0.33 MJ when it melts. That is plausibly enough for several hours, but the
+"15 L for 4 to 6 hours" figure is a **hypothesis, not a result** (see [risk R-09](../risk-register.md)).
 
 ## Power strategy
 

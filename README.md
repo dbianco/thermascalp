@@ -14,7 +14,9 @@
 
 ![ThermaScalp system overview: 3D-printed helmet and mobile cooling cart](docs/images/concept-system-overview.jpeg)
 
-*Concept illustration (AI-generated, annotations in Spanish). An English version is on the [roadmap](ROADMAP.md).*
+*Concept illustration (AI-generated, annotations in Spanish). It reflects the **original** concept: the mixing valve,
+the placeholder status of 15 °C and the printed-TPU caveats described below were added later in review (see the
+[risk register](docs/risk-register.md)). An updated English version is on the [roadmap](ROADMAP.md).*
 
 ## The problem
 
@@ -35,20 +37,24 @@ chemotherapy.
 Replace the stack of frozen caps with a **continuous, actively regulated liquid loop**, built from cheap, standard
 parts and open designs:
 
-1. A **3D-printed flexible helmet** (TPU) with an internal **meshed network of silicone microchannels**.
+1. A **helmet** with an internal **meshed network of silicone channels** in contact with the scalp. 3D-printed flexible
+   TPU is used for the outer shell and supports; skin-contact and fluid-carrying parts are medical-grade silicone.
 2. A **thermal cart** (target: **30 kg or less**, on wheels) holding an insulated 10 to 15 L tank of ice water, a
    12 V pump, and an open-source controller.
 3. **Insulated twin hoses** with quick-disconnect couplings joining the two.
 
 Instead of refrigerating the fluid with a compressor, the **ice in the tank acts as a free cold reservoir**. An
-ESP32-class microcontroller reads contact temperature sensors in the helmet and **doses the cold** by modulating the
-pump, holding the scalp near a stable target (about 15 °C at the contact surface in the current concept).
+ESP32-class microcontroller reads temperature sensors at the helmet inlet and across the scalp, and **doses the cold**
+by blending warm return water with cold tank water through a mixing valve or bypass, while the pump keeps the channels
+evenly supplied. A pump regulates flow, not temperature, so the valve is what sets the water temperature. The
+**target temperature is a configurable parameter that must be validated clinically**; the early concept's 15 °C is a
+placeholder, not a medical recommendation.
 
 ```mermaid
 flowchart LR
     subgraph Cart["Thermal cart (30 kg or less)"]
         T["Insulated tank<br/>water + ice, 10-15 L"]
-        P["12 V pump<br/>PWM controlled"]
+        P["12 V pump +<br/>mixing valve / bypass"]
         C["ESP32 controller<br/>+ OLED display"]
         PSU["Mains PSU<br/>(optional backup battery)"]
     end
@@ -60,7 +66,7 @@ flowchart LR
     end
     T --> P -->|"insulated hose, cold supply"| IN --> M --> OUT -->|"insulated hose, return"| T
     S -->|"scalp temperature"| C
-    C -->|"PWM duty cycle"| P
+    C -->|"pump PWM + valve position"| P
     PSU --> C
     PSU --> P
 ```
@@ -72,9 +78,11 @@ flowchart LR
 | Cooling source | Ice water in an insulated tank | No compressor, no refrigerant, low weight and cost |
 | Form factor | Wheeled cart, 30 kg or less | Frees the design from hand-luggage limits and allows 10 to 15 L of thermal mass |
 | Power | Mains via 12 V supply, with space for an optional backup battery | Unlimited runtime, lower weight and cost than a large battery |
-| Control | Closed loop on scalp temperature, PWM or duty-cycled pump | Dose the cold instead of pumping near-0 °C water continuously |
+| Control | Cascade loop: scalp sensors set the helmet-inlet temperature, which a mixing valve or bypass sets; pump sets flow | Pump speed alone controls flow, not temperature |
+| Setpoint | Configurable, to be validated clinically (15 °C is only a placeholder) | Effective and safe values depend on the regimen |
 | Helmet hydraulics | Meshed, symmetric, parallel channels with turbulence baffles | A single serpentine channel warms along its length and leaves hot spots |
-| Fabrication | FDM printing (TPU) plus silicone, off-the-shelf electronics | Anyone with a printer and a soldering iron can reproduce it |
+| Fabrication | Printed TPU for outer parts and supports, silicone for skin contact and fluid paths, off-the-shelf electronics | Printed TPU is not assumed to be skin-safe or watertight; the first prototype may use a commercial cap |
+| First MVP | An instrumented **scalp simulator** (artificial head), never a person | Prove six hours of uniform temperature, no leaks, no cold spots |
 
 More detail: [Architecture overview](docs/architecture/overview.md).
 
@@ -93,6 +101,7 @@ More detail: [Architecture overview](docs/architecture/overview.md).
 | [`docs/architecture/helmet-hydraulics.md`](docs/architecture/helmet-hydraulics.md) | Meshed microchannel design for uniform cooling |
 | [`docs/bom.md`](docs/bom.md) | Conceptual bill of materials |
 | [`docs/cost-estimate.md`](docs/cost-estimate.md) | MVP cost estimate by prototype level (about USD 2,000 to 3,000 for the base case) |
+| [`docs/risk-register.md`](docs/risk-register.md) | Numbered technical, clinical and regulatory risks, and corrections to the original concept |
 | [`docs/safety-and-regulatory.md`](docs/safety-and-regulatory.md) | Hazards, standards and validation path |
 | [`docs/open-questions.md`](docs/open-questions.md) | What is unknown and needs testing |
 | [`hardware/`](hardware/README.md) | CAD, enclosure and schematics (planned) |

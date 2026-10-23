@@ -12,6 +12,10 @@ Dates are intentionally omitted until the project has contributors. Each milesto
 
 ## Milestone 1: Bench models
 
+The first MVP is a **scalp simulator**, not a device for people: an instrumented artificial head that must hold a
+uniform temperature for six hours with no leaks and no dangerous cold spots.
+
+- [ ] Mixing valve or bypass circuit and helmet-inlet temperature control (see [risk R-01](docs/risk-register.md))
 - [ ] Heated thermal dummy head with measurable heat load
 - [ ] Tank thermal test: ice-water runtime versus room temperature and heat load
 - [ ] Flat channel coupons: serpentine versus meshed, pressure drop and uniformity
@@ -26,7 +30,8 @@ Dates are intentionally omitted until the project has contributors. Each milesto
 
 ## Milestone 3: Helmet prototype
 
-- [ ] Printable TPU helmet shell with integrated manifolds
+- [ ] Commercial cap or medical-silicone interface for skin contact, with printed TPU limited to outer parts and supports
+- [ ] Printable TPU shell and manifold housings
 - [ ] Silicone channel integration, leak testing
 - [ ] Fit tests on dummies of several sizes
 - [ ] First end-to-end run: cart, line and helmet on the thermal dummy
