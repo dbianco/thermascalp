@@ -5,9 +5,11 @@ milestones. Contributions of data, literature and measurements are especially we
 
 ## Clinical and physiological
 
-- Is the target a scalp-surface temperature or a follicle-zone temperature, and how is each measured? One study cited
-  in the review found a 3 °C coolant more effective than an 8 °C one at reaching the physiological target, at the cost
-  of more discomfort. How does that translate to a safe, effective setpoint?
+- Is the target a scalp-surface temperature or a follicle-zone temperature (the literature cites below about 22 °C at
+  1 to 2 mm depth), and how is each measured non-invasively? Ekwall et al. (2013, see [references](references.md))
+  found a 3 °C coolant reached that target more reliably than 8 °C but gave no significant difference in hair
+  preservation and more headache. Does a milder, more comfortable setpoint work as well on other regimens?
+- The top of the head cooled least in that study. How should helmet design and sensor placement handle it?
 - Which chemotherapy regimens benefit from scalp cooling and which do not? The device must never imply universal
   efficacy.
 

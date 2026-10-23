@@ -24,7 +24,7 @@ The review changed the design in four ways. Each is reflected in the architectur
 | ID | Risk | Sev. | Mitigation direction | Status |
 |---|---|---|---|---|
 | R-01 | **Pump speed alone cannot control temperature.** Lower flow reduces average cooling but creates cold and warm zones and does not guarantee the scalp reaches the target. | H | Add mixing valve or bypass, helmet-inlet sensor and cascade control (see [thermal control](architecture/thermal-control.md)) | Mitigated in design |
-| R-02 | **Non-uniform temperature** across the scalp (hot and cold zones). | H | Symmetric parallel channels, balanced flow, many distributed sensors, thermal mapping on a dummy | Open |
+| R-02 | **Non-uniform temperature** across the scalp (hot and cold zones). Scalp sites respond differently, and the top of the head cooled least in [Ekwall et al., 2013](references.md). | H | Symmetric parallel channels, balanced flow, many distributed sensors, thermal mapping on a dummy | Open |
 | R-03 | **Helmet fit and comfort** across head sizes; poor contact reduces effectiveness and causes pressure points. | H | Adjustable design, size range, fit tests on dummies first | Open |
 | R-04 | **Leaks near the patient**, with wet skin and shorted electronics. | H | Dry-break couplings, leak sensor, electronics above the tank, leak testing | Open |
 | R-05 | **Condensation** on cold surfaces and hoses. | M | Insulation, vapour-tight sleeves, drip management, humidity testing | Open |
@@ -43,8 +43,8 @@ The review changed the design in four ways. Each is reflected in the architectur
 
 | ID | Risk | Sev. | Mitigation direction | Status |
 |---|---|---|---|---|
-| R-20 | **Excessive cold** causes cold injury, pain or headache. A colder coolant can be more effective but also less comfortable (one study cited in the review compared a 3 °C coolant with an 8 °C one). | H | Independent minimum-temperature cut-off, ramp limits, comfort feedback, oncologist-defined limits | Open |
-| R-21 | **Setpoint not validated.** 15 °C is a placeholder; literature targets scalp or follicle-zone temperature and the right value varies by regimen. | H | Literature review, clinical advice, configurable parameters with validated limits | Open |
+| R-20 | **Excessive cold** causes cold injury, pain or headache. In a randomized study, a 3 °C coolant gave more headache and coldness than 8 °C without a significant hair-preservation benefit ([Ekwall et al., 2013](references.md)). | H | Independent minimum-temperature cut-off, ramp limits, comfort feedback, oncologist-defined limits | Open |
+| R-21 | **Setpoint not validated.** 15 °C is a placeholder; literature targets scalp or follicle-zone temperature (below about 22 °C at 1 to 2 mm depth, per [Ekwall et al., 2013](references.md)), which is not the same as a coolant setpoint, and the right value varies by regimen. | H | Literature review, clinical advice, configurable parameters with validated limits | Open |
 | R-22 | **Efficacy is regimen-dependent.** Clinical trials report significant hair preservation (roughly 40 to 50% or more in some groups) but not for all drugs. A device that works poorly could give false reassurance. | H | Make no efficacy claims; state limits in all documentation | Open |
 | R-23 | **Under-cooling** loses the protective effect without the user noticing. | M | Visible temperature, alarms, session logging | Open |
 

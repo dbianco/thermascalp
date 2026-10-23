@@ -55,7 +55,8 @@ glance.
 ## Sensing
 
 - **Several distributed sensors** in the helmet at representative locations (not just one), plus a sensor at the helmet
-  inlet and one at the outlet, with plausibility checks between them.
+  inlet and one at the outlet, with plausibility checks between them. Include the **top of the head**, which responded
+  least to cooling in the literature ([references](../references.md)).
 - Candidates: DS18B20 (digital, waterproof probes, 0.5 °C accuracy class) or NTC thermistors with a calibrated ADC
   path. Final choice depends on accuracy and response time measured on the bench.
 - Sensor fault (open circuit, short, out-of-range, disagreement) is treated as a **fault state**, never ignored.

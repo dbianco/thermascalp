@@ -36,8 +36,11 @@ of cold injury to the skin.
 A circulating system keeps replenishing cold, so it can hold a **moderate, steady temperature** instead. The early
 concept used a scalp contact temperature of roughly 15 °C (14 to 16 °C band) as a working value, with source notes
 citing 15 to 22 °C at follicle depth (1 to 2 mm). **15 °C is a placeholder, not a universal medical setpoint.** The
-literature speaks of reaching a sufficiently low temperature at the scalp or follicle zone, and in one study a 3 °C
-coolant was more effective than an 8 °C one at reaching the physiological target, with more potential discomfort. The
+literature speaks of reaching a sufficiently low temperature at the scalp or follicle zone (a commonly cited target is
+below about 22 °C at 1 to 2 mm depth). In a randomized study of 47 patients
+([Ekwall et al., 2013](references.md)), a 3 °C coolant was more effective than 8 °C at reaching that target, but it
+produced **no significant difference in hair preservation** and caused more headache and coldness. The top of the head
+cooled least. The
 right value must come from the clinical literature and an oncologist, and is tracked in
 [open questions](open-questions.md) and the [risk register](risk-register.md) (R-20, R-21).
 
