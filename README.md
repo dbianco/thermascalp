@@ -101,7 +101,7 @@ More detail: [Architecture overview](docs/architecture/overview.md).
 | [`docs/architecture/helmet-hydraulics.md`](docs/architecture/helmet-hydraulics.md) | Meshed microchannel design for uniform cooling |
 | [`docs/bom.md`](docs/bom.md) | Conceptual bill of materials |
 | [`docs/references.md`](docs/references.md) | Literature behind the design, with what each study does and does not show |
-| [`docs/cost-estimate.md`](docs/cost-estimate.md) | MVP cost estimate by prototype level (about USD 2,000 to 3,000 for the base case) |
+| [`docs/cost-estimate.md`](docs/cost-estimate.md) | MVP cost estimate by prototype level (about USD 2,500 to 3,500 for the base case) |
 | [`docs/risk-register.md`](docs/risk-register.md) | Numbered technical, clinical and regulatory risks, and corrections to the original concept |
 | [`docs/safety-and-regulatory.md`](docs/safety-and-regulatory.md) | Hazards, standards and validation path |
 | [`docs/open-questions.md`](docs/open-questions.md) | What is unknown and needs testing |
